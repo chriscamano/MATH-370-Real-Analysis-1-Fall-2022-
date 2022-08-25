@@ -25,6 +25,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
 \newcommand{\rtwo}{\mathbb{R}^2}
 \newcommand{\mxn}{{m\times n}}
 
@@ -59,7 +60,7 @@
 \begin{document}
 \maketitle
 \sect{Opening Comments}\\
-Homework information: \\
+Homework information: K.Ross 2nd edition: Sum of three square roots. Homeworks due thursdays  \\
 In the last lecture we concluded that there exist small gaps as you zoom into the real number line between rational numbers due to the existence of irrational numbers. \\
 \defn Dense set\\
 The set of rational numbers is a dense set, meaning that between any two numbers there exists a third number
@@ -79,11 +80,58 @@ as the value of n increments across the natural numbers we are partitioning the 
     p^2=3q^2
   \]
   If $a|bc$ then $a|b$ or $a|c$. This implies that either $3|p$ or $3|p$ meaning $3|p$.\\
-  If $3|p$ this implies$p=3k,k\in \N$.\\
+  If $3|p$ this implies $p=3k,k\in \N$.\\
   Returning to the original problem we now have:
   \[
     3k^2=q^2
   \]
-  Which implies that q is divisible by 3 this contradicts the original statement that the rational number$\frac{p}{q}$ was written in reduced form. 
+  Which implies that q is divisible by 3 this contradicts the original statement that the rational number $\frac{p}{q}$ is realtively prime.
 \end{proof}
+\begin{proof}Show that:
+  \[
+    \sqrt{3}-\sqrt{2}\notin \Q
+  \]
+  Let S=$\sqrt{3}-\sqrt{2}$
+\begin{align*}
+  &S^2=3-2\sqrt{3}\sqrt{2}+2\\\\
+  &\frac{5-S^2}{2}=\sqrt{6}
+\end{align*}
+\begin{proof}
+  Suppose that $\left(\frac{p}{q}\right)^2=6\quad p,q\in \Z$ and gcd(p,q)=1 (realtively prime).\\
+  this implies:
+  \[
+    p^2=6q^2
+  \]
+  If $a|bc$ then $a|b$ or $a|c$. This implies that either $6|p$ or $6|p$ meaning $6|p$.\\
+  If $6|p$ this implies $p=6k,k\in \N$.\\
+  Returning to the original problem we now have:
+  \[
+    6k^2=q^2
+  \]
+  Which implies that q is divisible by 6 this contradicts the original statement that the rational number $\frac{p}{q}$ is realtively prime.\\\\
+
+\end{proof}
+Therefore $\sqrt{6}$ is not rational and inturn $\frac{5-S^2}{2}$ is not rational by equivilancy.
+\end{proof}
+\defn Proof by induction. If P(0) is true and $P(n)\arr P(n+1)$ is true then $P(n)$ is true $\forall n\in \N$ This theorem follows from the fith peano axiom relating to locating the minimum element of a set. This gives rise to the principle of mathematical induction. \\\\
+\textbf{Homework 2 Show that} $1^2+2^2+..n^2=\frac{1}{6}n(n+1)(2n+1)}$
+
+\begin{proof}
+  Suppose #$1^2+2^2+..n^2=\frac{1}{6}n(n+1)(2n+1)}$# is true: \\
+  Base Case:n=2:\\\\
+  $$1+4=\frac{1}{6}(2)(3)(5)$$
+  $$5=5$$.
+  P(k):\\\\
+  $$\sum_{i=1}^{k}i^2=\frac{(k)(k+1)(2k+1)}{6}$$
+  P(k+1):\\\\
+  $$\sum_{i=1}^{k+1}i^2=\frac{(k+1)(k+2)(2(k+1)+1)}{6}$$\\\\
+  $$\sum_{i=1}^ki^2+(k+1)^2=\frac{(k+1)(k+2)(2k+3)}{6}$$
+  \[
+    \frac{k(k+1)(2k+1)}{6}+(k+1)^2=\frac{(k+1)(k+2)(2k+3)}{6}
+  \]
+  \[
+    \frac{2k^3+9k^2+13k+6}{6}=\frac{2k^3+9k^2+13k+6}{6}
+  \]
+\end{proof}
+
 \end{document}
