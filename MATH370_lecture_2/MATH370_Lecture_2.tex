@@ -58,5 +58,32 @@
 
 \begin{document}
 \maketitle
-\sect{Opening Comments}
+\sect{Opening Comments}\\
+Homework information: \\
+In the last lecture we concluded that there exist small gaps as you zoom into the real number line between rational numbers due to the existence of irrational numbers. \\
+\defn Dense set\\
+The set of rational numbers is a dense set, meaning that between any two numbers there exists a third number
+\\
+An example of a dense proper subset of the rational numbers would be;
+\[
+   B=\left\{\frac{k}{2^n}: k \in \Z, n \in \N\right\}
+\]
+as the value of n increments across the natural numbers we are partitioning the pre existing subset into smaller halves. This set has the property that:
+\[
+  \forall a\in B, b\in B, \exists c: a<c<b
+\]\\
+\begin{proof}
+  Suppose that $\left(\frac{p}{q}\right)^2=3\quad p,q\in \Z$ and gcd(p,q)=1 (realtively prime).\\
+  this implies:
+  \[
+    p^2=3q^2
+  \]
+  If $a|bc$ then $a|b$ or $a|c$. This implies that either $3|p$ or $3|p$ meaning $3|p$.\\
+  If $3|p$ this implies$p=3k,k\in \N$.\\
+  Returning to the original problem we now have:
+  \[
+    3k^2=q^2
+  \]
+  Which implies that q is divisible by 3 this contradicts the original statement that the rational number$\frac{p}{q}$ was written in reduced form. 
+\end{proof}
 \end{document}
