@@ -4,7 +4,7 @@
 \usepackage{amssymb}
 \pagestyle{empty}
 \author{Chris Camano: ccamano@sfsu.edu}
-\title{MATH 370  Lecture 12 }
+\title{MATH 370  Lecture 1 }
 \date{8/23/22}
 
 \topmargin -0.6in
@@ -77,14 +77,20 @@ A rational number is sometimes referred to as a dent on the real number system. 
  \textbf{List}: A list is a funciton whose domain is the set of natural numbers \mathbb{N}.\\\\
 Consider the following situation: Given p,q $\in \Z$ $$ \nexists\quad  p,q \in \Z : \left \frac{p}{q}\right^2=2$$
 \textbf{Proof}:
-Suppose \begin{align*}
-    &\exists\quad  p,q \in \mathbb{N} :\\
-    &(\frac{p}{q})^2=2\\
-    &\therefore p^2=2q^2. \\
-    &2|p \therefore p=2k, k \in \Z\\
-    &2k^2=q^2\\
-    &\therefore 2|q
-\end{align*}
+Let $p , q \in \mathbb{N}$, Suppose that
+\[
+  (\left \frac{p}{q} )^2
+\]
+This implies
+\[
+  p^2=2q^2
+\]
+meaning that $2|p$. If 2|p then p can be expressed as 2k, $k\in \mathbb{Z}$. Returning to the original expression"
+\[
+  2k^2=q^2
+\]
+which implies $2|q$\\
+
 Since we have shown that q and p share a common divisor of 2, however this contradicts the notion that the rational number was expressed in reduced form at the start of the proof. This implies that $\sqrt{2} \notin \mathbb{N}$\\\\
 \textbf{Dedekind Cuts} Dedekind cuts are used to express irrational numbers and culminate to the construction of the real numbers.\\\\
 Eventually you start loosing algebraic properties as you expand number systems such as commutativity and associativity. \\\\
@@ -100,5 +106,5 @@ The limit can be understood as a stabilizing value of a function or changing sys
 \]
 This is to say that the function is contained within the interval $ [L-\ep, L+\ep]$ past the x value N.
 
-Using another textbook as well called Elementary Analysis Ross. Purchase tonight. 
+Using another textbook as well called Elementary Analysis Ross. Purchase tonight.
 \end{document}
