@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 370  Homework 1 }
+\date
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+\vfuzz2pt
+\hfuzz2pt
+
+%%%%Short cuts and formatting%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{m\times n}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%Analysis%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\arr}{\rightarrow}
+\newcommand{\xlim}{\lim_{x\rightarrow \infty}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\i}{\text{ if }}
+\newcommand{\and}{\text{ and }}
+%%%%%% Theorem formatting%%%%%%%%%%%
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\numberwithin{equation}{section}
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+For every rational number there exists a natural number such that their product is also a natural number
+\[
+  \forall\quad  p\in \Q \quad \exists  k \in \N : pk\in \N
+\]
+For every irrational number there does not exist a natural number such that there product is rational.
+\[
+  \forall\quad  a \in \mathbb{Q}^c \quad \nexists k\in \N: ak\in \N
+\]\\\\
+
+\end{document}

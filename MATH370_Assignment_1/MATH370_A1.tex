@@ -1,0 +1,184 @@
+
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 370  Homework 1 }
+\date
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+\vfuzz2pt
+\hfuzz2pt
+
+%%%%Short cuts and formatting%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{m\times n}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%Analysis%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\arr}{\rightarrow}
+\newcommand{\xlim}{\lim_{x\rightarrow \infty}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\i}{\text{ if }}
+\newcommand{\and}{\text{ and }}
+%%%%%% Theorem formatting%%%%%%%%%%%
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\numberwithin{equation}{section}
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+
+\sect{Problem 1}
+\begin{proof}Show that:
+  \[
+    \sqrt{3}-\sqrt{2}\notin \Q
+  \]
+  Let S=$\sqrt{3}-\sqrt{2}$
+\begin{align*}
+  &S^2=3-2\sqrt{3}\sqrt{2}+2\\\\
+  &\frac{5-S^2}{2}=\sqrt{6}
+\end{align*}
+
+\begin{proof}
+  Suppose that $\left(\frac{p}{q}\right)^2=6\quad p,q\in \Z$ and gcd(p,q)=1 (realtively prime).\\
+  this implies:
+  \[
+    p^2=6q^2
+  \]
+  If $a|bc$ then $a|b$ or $a|c$. This implies that either $6|p$ or $6|p$ meaning $6|p$.\\
+  If $6|p$ this implies $p=6k,k\in \N$.\\
+  Returning to the original problem we now have:
+  \[
+    6k^2=q^2
+  \]
+  Which implies that q is divisible by 6 this contradicts the original statement that the rational number $\frac{p}{q}$ is realtively prime.\\\\
+
+\end{proof}
+Therefore $\sqrt{6}$ is not rational and inturn $\frac{5-S^2}{2}$ is not rational by equivilancy.
+\end{proof}
+
+\sect{Problem 2} $1^2+2^2+..n^2=\frac{1}{6}n(n+1)(2n+1)}$
+
+\begin{proof}
+  Suppose $$1^2+2^2+..n^2=\frac{1}{6}n(n+1)(2n+1)}$$ is true: \\
+  Base Case:n=2:\\\\
+  $$1+4=\frac{1}{6}(2)(3)(5)$$
+  $$5=5$$.
+  P(k):\\\\
+  $$\sum_{i=1}^{k}i^2=\frac{(k)(k+1)(2k+1)}{6}$$
+  P(k+1):\\\\
+  $$\sum_{i=1}^{k+1}i^2=\frac{(k+1)(k+2)(2(k+1)+1)}{6}$$\\\\
+  $$\sum_{i=1}^ki^2+(k+1)^2=\frac{(k+1)(k+2)(2k+3)}{6}$$
+  \[
+    \frac{k(k+1)(2k+1)}{6}+(k+1)^2=\frac{(k+1)(k+2)(2k+3)}{6}
+  \]
+  \[
+    \frac{2k^3+9k^2+13k+6}{6}=\frac{2k^3+9k^2+13k+6}{6}
+  \]
+\end{proof}
+\sect{Problem 3}
+Use induction to show"
+\[
+  \sum_{k=1}^nk^4=\frac{n^5}{5}+\frac{n^4}{2}+\frac{n^3}{3}-\frac{n}{30}
+\]
+\begin{proof}
+  Base Case: n=1:
+  \[
+    1^4=\frac{1^5}{5}+\frac{1^4}{2}+\frac{1^3}{3}-\frac{1}{30}
+  \]
+  \[
+    1=1
+  \]
+  P(k):  $$\sum_{i=1}^ki^4=\frac{k^5}{5}+\frac{k^4}{2}+\frac{k^3}{3}-\frac{k}{30}$$
+  P(k+1):
+  \[
+    $$\sum_{i=1}^{k+1}i^4=\frac{(k+1)^5}{5}+\frac{(k+1)^4}{2}+\frac{(k+1)^3}{3}-\frac{k+1}{30}$$
+  \]
+  \begin{align*}
+    &\sum_{i=1}^{k+1}i^4=\frac{(k+1)^5}{5}+\frac{(k+1)^4}{2}+\frac{(k+1)^3}{3}-\frac{k+1}{30}\\\\
+    &\sum_{i=1}^{k}i^4+(k+1)^4=\frac{(k+1)^5}{5}+\frac{(k+1)^4}{2}+\frac{(k+1)^3}{3}-\frac{k+1}{30}\\\\
+    &\frac{k^5}{5}+\frac{k^4}{2}+\frac{k^3}{3}-\frac{k}{30}+(k+1)^4=\frac{(k+1)^5}{5}+\frac{(k+1)^4}{2}+\frac{(k+1)^3}{3}-\frac{k+1}{30}\\\\
+    &\frac{6k^5+15k^4+10k^3-k}{30}+(k+1)^4=\frac{6k^5+45k^4+130k^3+180k^2+119k+30}{30}\\\\
+    &\frac{6k^5+45k^4+130k^3+180k^2+119k+30}{30}=\frac{6k^5+45k^4+130k^3+180k^2+119k+30}{30}\\\\
+  \end{align*}
+\end{proof}
+\sect{Problem 4}
+\begin{proof}
+  Show that: $\sqrt{2+\sqrt{2}}$. \\\\
+  Suppose that  $\sqrt{2+\sqrt{2}}=\frac{p}{q}$ where p and q are relatively prime\\
+
+  \begin{align*}
+    &2+\sqrt{2}=\frac{p^2}{q^2}\quad p,q\in \Z\\\\
+    &\sqrt{2}=\frac{p^2-2q^2}{q^2}\\\\
+    &2=\frac{(p^2-2q^2)^2}{q^4}\\\\
+    &2q^4=(p^2-2q^2)^2\\\\
+    &2q^4=p^4-4p^2q^2+4q^4\\\\
+    &p^4=-4p^2q^2+4q^4-2q^4\\\\
+    &p^4=2(-2p^2q^2+2q^4-q^4)\\\\
+    &\therefore 2|p\rightarrow p=2k, k \in \Z\\\\
+    &2=\frac{((2k)^2-2q^2)^2}{q^4}\\\\
+    &2=\frac{(4k^2-2q^2)^2}{q^4}\\\\
+    &2q^4=(4k^2-2q^2)^2\\\\
+    &2q^4=16k^4-16k^2q^2+4q^2\\\\
+    &q^4=8k^4-8k^2q^2+2q^2\\\\
+    &q^4=2(4k^4-4k^2q^2+q^2)\\\\
+    &\therefore 2|q\\\\
+  \end{align*}
+  $2|p$and $2|q$ which contradicts the notion that p and q are relatively prime.
+\end{proof}
+\sect{Problem 5}
+\begin{proof}
+  Find an nsuch that $n^10 <2^n$. Then use induction to show that the inequality remains
+true for all numbers greater or equal to the one that you found, $n>1$\\\\
+Base case: n =59 : \\\\
+\[
+  59^{10}=2^{59}
+\]
+\[
+   5.1111675e+17=5.7646075e+17
+\]
+P(k):\\
+\[
+  k^{10}<2^k
+\]
+\begin{align*}
+  &k^{10}<2^k\\
+  &k^{10}<k^{10}+k^{10}<2^k\\
+  &k^{10}<k^{10}+k^{10}<2(2^k)\\
+
+\end{align*}
+\end{proof}
+\end{document}
