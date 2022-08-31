@@ -61,6 +61,14 @@
 \begin{document}
 \maketitle
 
+
+\[
+  \alpha
+\]
+
+
+
+
 \sect{Problem 1}
 \begin{proof}Show that:
   \[
@@ -174,10 +182,12 @@ P(k):\\
 \[
   k^{10}<2^k
 \]
+\[
+  x^{10}+\sum_{i=1}^k\binom{10}{i}x^{10-i}<2^k
+\]
+P(k+1):
 \begin{align*}
-  &k^{10}<2^k\\
-  &k^{10}<k^{10}+k^{10}<2^k\\
-  &k^{10}<k^{10}+k^{10}<2(2^k)\\
+  &(k+1)^10<2^{k+1}\\
 
 \end{align*}
 \end{proof}
