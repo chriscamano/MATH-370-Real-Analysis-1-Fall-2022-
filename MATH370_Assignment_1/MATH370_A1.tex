@@ -169,26 +169,40 @@ Use induction to show"
 \end{proof}
 \sect{Problem 5}
 \begin{proof}
-  Find an nsuch that $n^10 <2^n$. Then use induction to show that the inequality remains
+  Find an nsuch that $n^{10} <2^n$. Then use induction to show that the inequality remains
 true for all numbers greater or equal to the one that you found, $n>1$\\\\
 Base case: n =59 : \\\\
 \[
-  59^{10}=2^{59}
+  59^{10}<2^{59}
 \]
 \[
-   5.1111675e+17=5.7646075e+17
+   5.1111675e+17<5.7646075e+17
 \]
 P(k):\\
 \[
   k^{10}<2^k
 \]
-\[
-  x^{10}+\sum_{i=1}^k\binom{10}{i}x^{10-i}<2^k
-\]
+
 P(k+1):
 \begin{align*}
-  &(k+1)^10<2^{k+1}\\
-
+  &k^{10}<2^k\\\\
+  &2k^{10}<2^{k+1}\\\\
+  &k^{10}+k^{10}<2^{k+1}
 \end{align*}
+$$
+  k^{10} +\sum_{i=1}^9\binom{10}{i}k^{10-i}+k(k^9-\sum_{i=1}^9\binom{10}{i}k^{10-i-1})<2^{k+1}
+$$
+the final term of $(k+1)^{10}$ is
+\[
+  \binom{10}{10}x^{10-10}=1
+\]
+For all $k\geq 59$ $$ k(k^9-\sum_{i=1}^9\binom{10}{i}k^{10-i-1})>1$$ so
+\begin{align*}
+  &k^{10} +\sum_{i=1}^9\binom{10}{i}k^{10-i}+1<k^{10} +\sum_{i=1}^9\binom{10}{i}k^{10-i}+k(k^9-\sum_{i=1}^9\binom{10}{i}k^{10-i-1})<2^{k+1}\\\\
+    &(k+1)^{10}<x^{10} +\sum_{i=1}^9\binom{10}{i}k^{10-i}+k(k^9-\sum_{i=1}^9\binom{10}{i}k^{10-i-1})<2^{k+1}
+\end{align*}
+\[
+  (k+1)^{10}<2^{k+1}
+\]
 \end{proof}
 \end{document}
