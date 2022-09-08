@@ -1,0 +1,219 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+ \author{Chris Camano: ccamano@sfsu.edu}
+ \title{MATH 370  Homework 2 }
+ \date
+
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+
+
+
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+
+
+\begin{document}
+
+\maketitle
+For problem one please see attached pdf image. This image should display prior to the work done in Latex. If for any reason this image is not included in this assignment please email me at the address above and I will send an additional copy.
+
+\sect{Problem 2}
+Write down all conditions of an ordered field. State the condition that an
+ordered field be dense. Google an example of an ordered field that is not
+dense.[The extent to which you wish to understand what you google is up
+to you and your time.]
+\\\\
+\textbf{Properties of a field}:
+\begin{enumerate}
+\item Associativity of addition and multiplication: a + (b + c) = (a + b) + c, and a ⋅ (b ⋅ c) = (a ⋅ b) ⋅ c.
+\item Commutativity of addition and multiplication: a + b = b + a, and a ⋅ b = b ⋅ a.
+\item Additive and multiplicative identity: there exist two different elements 0 and 1 in F such that a + 0 = a and a ⋅ 1 = a.
+\item Additive inverses: for every a in F, there exists an element in F, denoted −a, called the additive inverse of a, such that a + (−a) = 0.
+\item Multiplicative inverses: for every a $\neq$ 0 in F, there exists an element in F, denoted by a-1 or 1/a, called the multiplicative inverse of a, such that a ⋅ a−1 = 1.
+\item Distributivity of multiplication over addition: a ⋅ (b + c) = (a ⋅ b) + (a ⋅ c).
+\end{enumerate}
+\textbf{Additional Properties of an Ordered Field:}
+An order structure $\leq$  satisfying :
+\begin{enumerate}
+  \item Given a and b either $a \leq b$ or $b\leq a$
+  \item If $a\leq b $ and $b \leq a $ then a=b
+  \item If $a\leq b$ and $b \leq c$ then $a\leq c$
+  \item If $a \leq b$ then $a+c\leq b+c$
+  \item If $a \leq b$ and $0 \leq c$ then $ac \leq bc$
+\end{enumerate}
+These are the five properties listed in the Ross textbook, however I suspect that a more general description exists for an ordered field. Some research revealed to me that an ordered field is a pair consisting of a field $\mathbb{F}$and a subset of that field $,\mathbb{F}^+$ satisfying:
+\begin{enumerate }
+  \item $\forall a, b \in \mathbb{F}^+ , a+b \in \mathbb{F}$
+  \item $\forall a,b \in \mathbb{F}^+, ab\in \mathbb{F}^+$
+  \item $\forall a \in F$ either :
+  \[
+    a\in \mathbb{F}^+ \quad -a \in \mathbb{F}^+ \quad a=0
+  \]
+  is true
+\end{enumerate }
+When doing research on complex eigenvalues over the summer, I learned that the complex numbers form an unordered field as I was not able to design an algorithm that sorted them in a meanginful way besides magnitude which did not account for conjugate pairs. \\\\
+After researching online I was not able to find an example of an ordered field that was not dense, there were some interesting debates about the categorical classification of ordered fields on mathstack exchange but I could not find a single psuedo credible source describing an ordered field that is not dense. This leads me to believe that all ordered fields are dense for the following reasons: \\
+One a finite field cannot be dense thus an ordered field must at the very least be an infinite set. If this set was infinite but not dense then it would consist of integer values or some similar notion of a single multiple of a number in a number system. If this were the case then the axioms of an ordered field would not hold becuase ...
+
+
+\sect{Problem 3. }\\
+Let {L, U} be a partition of rationals $\Q$ defined by $L = \{l \in \Q|l^2 < 2\}\cup \Q^-$
+and $U = \{u \in \Q|u^
+2 > 2\} \cap \Q^+$
+\begin{enumerate}
+
+  \item (a) Let
+  \[
+    f(l)=\frac{4}{l^2+2}|l|
+  \] Show that for every $l \in  L, l < f(l)$ and f(l) $\in$ L.
+\begin{proof}
+  for all $l \in L$ the term : \
+  \[
+    q=\frac{4}{l^2+2}>1
+  \]
+  Since in order for q to be equal to one or less l would have to be $\geq \sqrt{2}$. By construction of L this implies q is always greater than one acting as a positive scalar on the absolute value of l guarenteeing that $f(l)>l$\\\\
+  To show that $f(l)\in L$ consider the following: Suppose that $f(l)\notin \L$ this implies that $f(l) \geq \sqrt{2}$ or equivilantly:
+  \[
+    \frac{4}{l^2+2}|l|\geq \sqrt{2}
+  \]
+  \begin{align*}
+    &4|l|=\sqrt{2}(l^2+2)\\
+    &4|l|=\sqrt{2}l^2+\sqrt{2}2\\
+    &16l^2=2l^4+8+2(\sqrt{2}l^2\sqrt{2}2)\\
+    &16l^2\geq 2l^4+8+8l^2\\
+    &8l^2\geq l^4+4+4l^2\\
+    &0\geq l^4+4-4l^2\\
+    &0\geq (l^2-2)^2
+  \end{align*}
+  This implies that f(l)$\geq \sqrt{2}$ when $(l^2-2)^2\leq 0$ Solving for 0 the roots of this polynomial are $\pm\sqrt{2}$ but $\sqrt{2} \notin L$ therefore $(l^2-2)^2>0 $ for all $l\in L$ and inturn $f(l) < \sqrt{2}\quad  \forall l\in L $.\\
+  This leads to the conclusion that $f(l)\in L$\\\\ Note as well that we can prove that $(l^2-2)^2$ is positive for all $l\neq \pm \sqrt{2}$ by examing the derivative of the function. I will choose to omit this further analysis for the time being since it seems beyond the scope of what is required for the problem.
+\end{proof}
+  \item (b) Conclude that L does not have a largest element.\\
+  $L\subset \mathbb{Q}$ therefore by the densness of $\Q$ extends to L as well which implies there does not exist a largest number in the set L. Another approach would be to consider the point halfway between $\sqrt{2}$ and a proposed maximum of L. Since densness gives us the property that forall a and b there exists c such that: $a<c<b$ this implies there exists a slightly larger number then a proposed maximum a.
+  \item (c)
+  . Show that for every $u \in  U, g(u) < u$ and g(u) $\in$U\\
+  This proof will follow a similar construction to that of part a. Let us first define the function as follows:\\
+  \[
+    g(u)=\frac{u+\frac{2}{u}}{2}=\frac{u^2+2}{2u}=\frac{u}{2}+\frac{1}{u}
+  \]
+  by partial fraction decomposition. \\
+  Note that this is equivilant to dividing u in half and then adding a number less than one. In order for g(u) to be $\geq $ u then this would mean solving the expression: \[
+    g(u)=u
+  \]
+  \begin{align*}
+  &  \frac{u^2+2}{2u}=u\\
+  & u^2+2=2u^2\\
+  &2=u^2\\
+  &u=\pm\sqrt{2}
+  \end{align*}
+  The set U consists of the elements in $\mathbb{Q}$ greater than $\sqrt{2}$ which means that $g(u)$ can then concequently never be equal to u. To show that g(u) cannot be greater than u consider the following. If g(u) was greater than u this would mean that :
+  \[
+    0<u<\sqrt{2}
+  \]
+  however by construction the set U excludes these values ( actually the first half of L here) so g(u) can never be greater than u either meaning we have proven that $\forall u\in U g(u)<u$. To show that $g(u)\in U$ we can recylce quite a bit of logic from the previous proof, if g(u) is always less than u , and u is always greater than $\sqrt{2} $ then g(u) obeys the following inequality:
+  \[
+    \sqrt{2}<g(u)<\infty
+  \]
+  The reason that U is not bounded above is because the intersection of $\{u \in \Q|u^2 > 2\}$ and  $\Q^+$ is the set of all rational numbers greater than $\sqrt{2}$. I belive that the intersection with the positive rationals is a redundant operation due to the fact that there are infinite rational values greater than the square root of two. Because of this g(u) goes to infinity as the value of u grows. Since the value of g(u) is a rational number greater than $\sqrt{2}$, $g(u)\in U \forall u \in u $
+  \item (d) Conclude that U does not have a least element.
+  Due to the fact that $U \subset \Q $ we can extend the properties of denseness to U as well. This implies that for any contendor point in U claimed to be the smallest element we can find another smaller element by comparing the infimum of the set and the prospective rational and picking a point half way between them such that if c is the contendor:
+  \[
+    \sqrt{2}< \frac{c+\sqrt{2}}{2}<c
+  \]
+  \item (e) Conclude that U is the set of all rational upper bounds of L.\\
+  Since U is the set of all rational numbers greater than the square root of 2 and the supremum of L is the square root of two then we can say confidently that U is the set of all upper bounds for L since for any $u \in U$ and any $l \in L $ $l< u $
+  \item (f) Conclude that sup L$\notin \Q$.\\
+  The supremum of L is the irrational number $\sqrt{2}$ the set L is constructed such that all values are less than the sqaure root of two. This means that the supremum of L is $\sqrt{2}$ and since $\sqrt{2}$ is irrational $\sup L \notin \Q$
+  \item (g) List computed decimal values of rationals f(1), f(f(1)), $f^3$(1) andg(3), g(g(3)), $g^3$(3).
+  Here are the values:
+  \begin{align*}
+    &f(1)= \frac{4}{3}=1.333\\
+    &f(f(1))=\frac{24}{17}=1.41176\\
+    &f(f(f(1)))=\frac{816}{577}=1.414211\\
+    &g(3)=1.833\\
+    &g(g(3))=1.46212\\
+    &g(g(g(3)))=\frac{72097}{50952}=1.415
+  \end{align*}
+
+\end{enumerate}
+\sect{Problem 4}\\
+Squeezing the most irrational number by continued fractions. Let $g=\frac{\sqrt{5}-1}{2}. Let f(x)=\frac{1}{1+x}$L is the set of odd iteratios of f(1) U is the set of even iterations of f(1).\\
+\begin{enumerate}
+  \item (a) Write down two elements of L and two elements of U as continued
+  fractions and then compute their values and place them on a real
+  axis together with g.\\
+  Elements of L:
+  \[
+    f^3(1)=\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{2}}}=\frac{3}{5}
+  \]
+  \[
+    f^5(1)=\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{2}}}}}=\frac{8}{13}
+  \]
+  Elements of U:\[
+    f^2(1)=\cfrac{1}{1+\frac{1}{2}}=\frac{2}{3}
+  \]
+  \[
+    f^4(1)=\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{1+\frac{1}{2}}}}=\frac{5}{8}
+  \]
+  I do not have a tikz environment configured so please reference this inequality as evidence that I understand how these are ordered on a number line.
+
+  \[
+    f^1<f^3<f^5<f^4<f^2
+  \]
+  \item (b) Show that odd iterates of 1 form an increasing sequence bounded
+  above by g. Show that even iterates of 1 form a decreasing sequence
+  bounded below by g.\\
+  \[
+    L=\{.5,.6,.615385,.617647,.617978,...\}
+  \]
+  \[
+    U=\{.66,.625,.619048,.618182,.618056
+  \]
+  \item (c) Conclude that every element of U is an upper bound of L.
+  Since every element of U is greater than the supremum of L every $u\in U$ acts as an upper bound for L.
+  \item (d) Conclude that sup L = inf U = g.\\
+  $\forall l\in L, l <g$ thus supL = g.
+  $\forall u\in U, u>g$ thus infU=g. \\
+  We then arrive at the implied relation:
+  \[
+    supL=infU.
+  \]
+\end{enumerate}
+
+
+\end{document}
