@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  8 SEP 2022 00:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  8 SEP 2022 20:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -574,8 +574,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--92
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-./MATH370_hw2.tex:94: Undefined control sequence.
-l.94 \sect
+./MATH370_hw2.tex:99: Undefined control sequence.
+l.99 \sect
           {Problem 3. }\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -584,26 +584,37 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Command \L invalid in math mode on input line 110.
+LaTeX Warning: Command \L invalid in math mode on input line 116.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--111
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--125
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
 
  []
+
+./MATH370_hw2.tex:128: Missing $ inserted.
+<inserted text> 
+                $
+l.128   This implies that f(l)^
+                               2$\geq 2$ when $(l^2-2)^2\leq 0$ Solving for ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./MATH370_hw2.tex:128: Missing $ inserted.
+<inserted text> 
+                $
+l.128   This implies that f(l)^2$\geq
+                                      2$ when $(l^2-2)^2\leq 0$ Solving for ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 128--131
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
 
  []
 
 [3]
-./MATH370_hw2.tex:174: Undefined control sequence.
-l.174 \sect
+./MATH370_hw2.tex:181: Undefined control sequence.
+l.181 \sect
            {Problem 4}\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -612,36 +623,43 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--176
+Underfull \hbox (badness 10000) in paragraph at lines 181--183
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 198--201
+Underfull \hbox (badness 10000) in paragraph at lines 205--207
 
  []
 
-[5] (./MATH370_hw2.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--215
+
+ []
+
+[5] [6] (./MATH370_hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 2880 strings out of 478542
- 38530 string characters out of 5854402
- 342641 words of memory out of 5000000
- 20772 multiletter control sequences out of 15000+600000
- 435546 words of font info for 103 fonts, out of 8000000 for 9000
+ 2888 strings out of 478542
+ 38594 string characters out of 5854402
+ 341641 words of memory out of 5000000
+ 20775 multiletter control sequences out of 15000+600000
+ 437032 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,66p,529b,243s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.en
-c}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fo
-nts/type1/urw/symbol/usyr.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times
-/utmb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/te
-xlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MATH370_hw2.pdf (5 pages, 87390 bytes).
+ 57i,10n,66p,660b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8
+r.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/u
+rw/symbol/usyr.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
+><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MATH370_hw2.pdf (6 pages, 101316 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
