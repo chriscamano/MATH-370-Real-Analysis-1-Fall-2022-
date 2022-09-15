@@ -1,0 +1,128 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+ \author{Chris Camano: ccamano@sfsu.edu}
+ \title{MATH 370  lecture 6 }
+ \date
+
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+
+
+
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+
+
+\begin{document}
+
+\maketitle
+\[
+  lim_{n\mapsto \infty}a_n=L
+\]
+\begin{enumerate}
+  \item outside every interval centered at L there is a finite number of $a_n's$
+  \item Inside dvery interval containing L therae are infinite number of $a_n's$.
+\end{enumerate}
+\[
+  lim_{n\mapsto \infty}a_n =\infty
+\]
+\begin{enumerate}
+  \item Every bounded interval contains finite number of sequences
+  \item outside every bonded interval there  are infinite sequences.
+\end{enumerate}
+Midterm structure: in person\\
+Example of a question that may appear on the midterm. \\\\
+Probably about three weeks from now.
+\\\\
+\newcommand{\nlim}{\lim_{n\rightarrow\infty}}
+If  $\nlim a_n=L_1$ and $\nlim a_n=L_2$ then $L_1=L_2$\\\\
+\defn $\nlim(ka_nn)=k\nlim a_n\quad k\in \Z$\\\\
+Consider the following:
+\newcommand{\eps}{\epsilon}
+\[
+   \forall \mu >0 \quad\exists N : \forall n>N : |a_n-L|<\mu
+\]
+Given an arbitray $\eps >0 $ let $\mu =\frac{\eps}{10}$
+So this gives that:
+\[
+  \forall \eps >0\quad  \exists N : \forall n>N |a_n-L|<\frac{\eps}{10}
+\]
+\\\\
+Proof of  $\nlim(ka_nn)=k\nlim a_n\quad k\in \Z$\\\\
+\begin{proof}
+  \[
+    \forall \eps >0 \quad\exists N : \forall n>N |a_n-L|<\frac{\eps}{k}
+  \]
+\begin{align*}
+  &k|a_n-L|<\eps\\
+  &\forall \eps >0\quad  \exists N  |ka_n-kL|<\eps\\
+  &\nlim (ka_n)=kL\\
+  &\nlim (ka_n)=k\nlim a_n
+\end{align*}
+\end{proof}
+Lemma: If there exists a finite limit then the sequence must be bounded. In the situation where we have a finite number of points hat exist outside of the limit strip we can add the maximum outlier to the limit to correct the inequality. \\
+\begin{align*}
+  &|a_n-L|<10\\
+  &|a_n|<10+L\\
+\end{align*}
+Let M $=\max(|a_1|,|a_2|,...,|a_{n-1}|,10+L)$ then for all $a_n $ $a_n<M $ thus if the limit exists the the set is bounded.\\\\
+Theorem: The limit of the prodcut of two sequences is equal to the limit of both as folows:
+\[
+  \nlim a_nb_n=\nlim a_n\nlim b_n
+\]
+Additional Theorems:
+\[
+  \nlim b_n \neq 0 \rightarrow \nlim \frac{a_n}{b_n}=\frac{\nlim a_n}{\nlim b_n}
+\]
+Additional Theorem:
+\[
+  \nlim \left(\frac{1}{n^p}\right)=0 \text{ if}  p>0
+\]
+Additional Theorem:
+\[
+  \nlim a^n=0 \text{ if } |a|<1
+\]
+Additional Theorem:
+\[
+  \nlim n^{\frac{1}{n}}=1
+\]
+Additional Theorem:
+\[
+  \nlim a^{\frac{1}{n}}=1, q\neq 0
+\]
+
+\end{document}
