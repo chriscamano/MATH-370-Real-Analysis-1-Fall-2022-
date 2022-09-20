@@ -131,13 +131,40 @@
         \end{align*}
       \end{proof}
       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-      \item \textbf{Find $\nlim(\sum_{k=0}^na^k), |a|<1}$}
+      \item \textbf{Find $\nlim(\sum_{k=0}^na^k), |a|<1}$}\\
+      Find \[
+        \nlim \frac{1-a^{n+1}}{1-a}
+      \]
+      \[
+        \nlim \frac{1}{1-a}1-a^{n+1}
+      \]
+      \begin{align*}
+        &\nlim \left(\frac{1}{1-a}\right)\nlim(1-a^{n+1})\\
+        &\nlim \left(\frac{1}{1-a}\right)\nlim(1)-\nlim(a^{n+1})\\
+        &\nlim\frac{1}{1-a}=\frac{1}{1-a}
+      \end{align*}
       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       \item
       \textbf{Calculate $\nlim(\sum_{k=0}^n\frac{1}{3^k})$}
+    \[
+      \sum_{k=0}^n\frac{1}{3^k}=\sum_{k=0}^n\frac{1}{3}^k
+    \]
+    By part b we know that this sequence can be solved in the limit as:
+    \[
+      \frac{1}{1-a}
+    \]
+    thus:
+    \[
+      \nlim\sum_{k=0}^n\frac{1}{3^k}=\frac{1}{\frac{2}{3}}=\frac{3}{2}
+    \]
       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       \item
       \textbf{What is  $\nlim(\sum_{k=0}^na^k), a\geq 1}$}
+      \begin{align*}
+        &\nlim \left(\frac{1}{1-a}-\frac{1-a^{n+1}}{{1-a}}\right)\\
+        &\left(\frac{1}{1-a}-\frac{\nlim1-a^{n+1}}{{1-a}}\right)\\
+        &\left(\frac{1}{1-a}-\frac{\infty}{{1-a}}\right)=\infty\\
+      \end{align*}
     \end{enumerate}
   \end{proof}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -149,26 +176,32 @@
       \[
         s_n=\frac{1}{n}
       \]
+      The sequence above converges to zero, and thus by theorem 9.1 is bounded. The sequence is decreasing as $s_n \geq s_{n+1} \forall n$
       \item
       \[
-        s_n=\frac{(-1_^n)}{n^2}
+        s_n=\frac{(-1^n)}{n^2}
       \]
+      This sequence is bounded but does not converge and is not monotonic
       \item
       \[
         s_n=n^5
       \]
+      This sequence is increasing, is not bounded and does not converge
       \item
       \[
         s_n=sin(\frac{n\pi}{7})
       \]
+      This sequence is bounded but does not converge and is not monotonic
       \item
       \[
         s_n=(-2)^n
       \]
+      This sequence is not bounded, and is not monotonic
       \item
       \[
         s_n=\frac{n}{3^n}
       \]
+      This sequence is decreasing and is bounded it converges as well.
     \end{enumerate}
   \end{proof}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -177,9 +210,14 @@
     \item\\
     Let $(s_n)$ be a sequence such that:
     \[
-      |s_{n+1}-s_n|<s^{-n} \forall n\in \mathbb{N}
+      |s_{n+1}-s_n|<2^{-n} \quad \forall n\in \mathbb{N}
     \]
     Prove $s_n$ is a Cauchy sequence and hence a convergent sequence.
+    \begin{proof}
+    To prove that $s_n$ is a Cauchy sequence let us prove then that \[
+      \forall \epsilon>0 \exists N: \quad m,n>N \righatrrow |s_n-s_m|<\epsilon
+    \]
+    \end{proof}
     \item\\
     Is the result in (a) true if we only assume $|s_{n+1}-s_n|<\frac{1}{n}$?
   \end{proof}
