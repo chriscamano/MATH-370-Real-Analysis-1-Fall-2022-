@@ -45,11 +45,50 @@
 \renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
 \bibliographystyle{amsplain}
 
-
-
 \begin{document}
 \maketitle
-\sect{Cauchy Sequences}\\
-
-
+\newcommand{\nlim}{\lim_{n\rightarrow\infty}}
+\sect{Geometric Series}\\
+\[
+  \sum_{k=0}^n aq^k=\frac{a(1-q^{n+1})}{1-q}=\frac{a}{1-q}
+\]
+Any element in Q can be represented as a finite expression.\\\\
+A monotone sequence that is bounded by above converges.
+\definition Cauchy Sequence: \\
+all Cauchy sequences converge, all cauchy sequences are monotone and bounded:
+\[
+  \forall \epsilon>0\quad \exists N\forall  n,m>N: |s_n-s_m|<\epsilon
+\]
+This is saying that for any two points in the sequence past M that the difference of their values when evaluated in the sequence is less tahn epsilon. \\
+If this is true the sequence is referred to as being a cauchy sequence. \\\\
+If $\nlim$ exits then the sequence is a cauchy sequence.
+\begin{proof}
+  \[
+    \forall \epsilon>0\quad \exists N\quad \forall  n>N: |s_n-L|<\frac{\epsilon}{2}
+  \]
+  \[
+    \forall \epsilon>0\quad \exists N\quad \forall  m>N: |s_n-L|<\frac{\epsilon}{2}
+  \]
+  \[
+    |a_n-a_m|\leq|a_n-L|+|L-a_m|<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon
+  \]
+\end{proof}
+Being cacuchy and having a limit is equivilant to the completeness of the real numbers. (EXAM QUESTION)\\\\
+\definition:
+Let $b_m=\{sup\{a_m,a_{m+1},..\}$ then we know that $b_m$ converges since the sequence is decreasing. Thus:
+\[
+  \nlim b_n=\nlim \sup a_n
+\]
+$\nlim \sup a_n$ always exists:
+Example:
+\[
+  \nlim \sup \frac{(-1)^n}{n}=0
+\]
+\[
+  \nlim \inf a_n=\nlim \inf \{a_m,a_{m+1},...
+\]
+\theorem If $\nlim\sup a_n$exists and $\nlim\inf a_n$ and $\lim a_n$ exists then :
+\[
+  \nlim\sup a_n=\nlim\inf a_n=\nlim a_n
+\]
 \end{document}
