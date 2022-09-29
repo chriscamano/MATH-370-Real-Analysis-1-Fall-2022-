@@ -215,12 +215,109 @@
     Prove $s_n$ is a Cauchy sequence and hence a convergent sequence.
     \begin{proof}
     To prove that $s_n$ is a Cauchy sequence let us prove then that \[
-      \forall \epsilon>0 \exists N: \quad m,n>N \righatrrow |s_n-s_m|<\epsilon
+      \forall \epsilon>0 \exists N: \quad m,n>N \righatrrow |s_m-s_n|<\epsilon
     \]
+    In order to go about proving this statement we must first find a way to connect the original statement to a general statment about being cauchy. One such way of doing this is through estbalishing the following corresponce:
+    \[
+      m=n+k, k \in \Z
+    \]
+    such that:
+    \[
+      |s_m-s_n|<\epsilon\rightarrow |s_{n+k}-s_n|<\epsilon
+      \]
     \end{proof}
+    With this new construction we can now leverage the triangle inequality in the following way for each pairwise distance estimate:
+    \[
+      |s_{n+k}-s_n|\leq \sum_{i=n}^{n+k}|s_{i+1}-s_i|
+    \]
+    however, note also that we have the original inequality for the case of k=1, meaning we can develop this inequality further:
+    \[
+      |s_{n+k}-s_n|\leq \sum_{i=n}^{n+k}|s_{i+1}-s_i|<\sum_{i=n}^{n+k-1}\frac{1}{2^i}
+    \]
+    which simplifies to:
+    \[
+      |s_{n+k}-s_n|<\sum_{i=n}^{n+k-1}\frac{1}{2^i}
+    \]
+    We would like to use the geometric series formula here to simplify the right hand side however the starting index is problematic, so to correct this we can factor out a term of: $\frac{1}{2^k}$ leaving:
+    \[
+      |s_{n+k}-s_n|<\frac{1}{2^k}\sum_{i=0}^{n-1}\frac{1}{2^i}
+    \]
+    Applying formula for sum of a geometric sequence:
+    \[
+        |s_{n+k}-s_n|<\frac{1}{2^k}\left[\frac{1-\frac{1}{2^n}}{\frac{1}{2}}\right]<\frac{1}{2^k}\left[\frac{1}{\frac{1}{2}}\right]
+    \]
+    \[
+      |s_{n+k}-s_n|<\frac{1}{2^{k-1}}
+    \]
+    From this statement we can now prove that it is cauchy by considering an epsilon as follos:
+    \[
+      \epsilon=\frac{1}{2^{k-1}}
+    \]
+    Which gives a value of N equal to:
+    \[
+      N=\log_2(\frac{1}{\epsilon})+1
+    \]
+    Finally leeaving us to the statement:
+    $$\forall \epsilon >0 \exists N=\log_2(\frac{1}{\epsilon})+1: n+k,n>N \rightarrow |s_{n+k}-s_n|<\epsilon$$
+    Thus since $s_n$ is cauchy by the completeness of the real numbers $s_n$ is also convergent.\\\\
     \item\\
     Is the result in (a) true if we only assume $|s_{n+1}-s_n|<\frac{1}{n}$?
+    \\\\ If we make this assumption then we cannot say that the sequence is cauchy for the following reason:
+    When we start to consider the same set up and get to a sum over $\frac{1}{n}$ we are now working with the harmonic series, or rather a partial sum of said harmonic series. This sequence diverges to infinity(slowly) Meaning we can always pick values greater than some $N$ such that the distance between terms is not fixed in the desired cauchy manner for $|s_{n+k}-s_n|$.
   \end{proof}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item State Boltzano-Weierstrass Theorem. Apply it to $a_n$= cos(2 pi n) and illustrate an example of a subsequence.\\
+  The Boltzano-Weierstrass Theorem is as follows:
+  \textbf{Every bounded sequence has a convergent subsequence}\\
+  Consider the subsequence of $a_n=cos(2\pi n)$ in which we only consider the values $k\in \mathbb{N}$ then we have the subsequence $\{1,1,1,1,1,\}$ which has $\
+  lim_{k\rightarrow \infty}a_n_k=1$
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item 11.1: Let $a_n=3+2(-1)^n$
+  State the first five terms of the sequence:
+  \[
+    a_n=\{1,5,1,5,1,5,1,5,1,5,....\}
+  \]
+  Give a subsequence that is constant with selection function: $\sigma$. One example of a subsequence that is constant is the choice of either the odd values or the even values each corresponding with one of the two possible values.
+  \[
+    s_{nk}=\{1,1,1,1,1,....,\} \quad \sigma(k)=2k+1
+  \]
+  Here we are picking the subsequence of the odd values of the sequence giving all ones since every other term is 1.
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item 11.2  Consider the following sequences:
+  \[
+    a_n=(-1)^n\quad b_n=\frac{1}{n} \quad c_n=n^2\quad d_n=\frac{6n+4}{7n-3}
+  \]
+  \begin{enumerate}
+    \item For each sequence give an example of a monotone subsequence
+    \begin{align*}
+      &a_n: a_{nk}=\{-1,-1,-1,-1..\} \sigma(k)=2k+1
+    \end{align*}
+    All other sequences are monotone so any of their subsequences should be monotone as well ( this could get me in trouble but intuitivley makes sense).
+    \item For each sequence give its set of subsequential limits
+    By theorem 11.3 we have that if a sequence converges then every subsequence converges to the same limit. ( cool theorem ) Three of the sequence above all but the first have a limit thus their subsequence limits are equal to the sequence limits as follows:
+    \[
+      \nlim b_n=0\quad \nlim c_n=0\nlim d_n=\frac{6}{7}
+    \]
+    So for these sequences the subsequence limits are single elements sets consisting of just these values. For $a_n$ however we see some special behavior due to the fact that there is an alternating behavior in the sequence between -1 and 1 so the subsequential limits is the set $\{-1,1\}$
+    \item For each sequence give its limsup and lim inf
+    \[
+      \liminf a_n=-1 \quad \limsup a_n=1
+    \]
+    By theorem 10.7 we have $\limsup=\liminf=\lim a_n$
+    \[
+      \liminf b_n=\lim b_n=0 \quad \limsup b_n=\lim a_b=0
+    \]
+    \[
+      \liminf c_n=\lim c_n=\infty \quad \limsup c_n=\lim c_n=\infty
+    \]
+    \[
+      \liminf d_n=\lim d_n=\frac{6}{7} \quad \limsup d_n=\lim d_n=\frac{6}{7}
+    \]
+
+    \item Which of the sequences converges? Diverges to $\infty$? Diverges to $-\infty$\\
+    All sequences except a and b converge. Sequence b diverges to infinity
+    \item Which of the sequences is bounded ?\\
+    all sequences except $c_n$ are bounded
+  \end{enumerate}
 \end{enumerate}
 \end{document}
