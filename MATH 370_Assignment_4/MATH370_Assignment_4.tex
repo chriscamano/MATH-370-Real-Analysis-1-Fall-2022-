@@ -240,18 +240,18 @@
     \]
     We would like to use the geometric series formula here to simplify the right hand side however the starting index is problematic, so to correct this we can factor out a term of: $\frac{1}{2^k}$ leaving:
     \[
-      |s_{n+k}-s_n|<\frac{1}{2^k}\sum_{i=0}^{n-1}\frac{1}{2^i}
+      |s_{n+k}-s_n|<\frac{1}{2^n}\sum_{i=0}^{k-1}\frac{1}{2^i}
     \]
     Applying formula for sum of a geometric sequence:
     \[
-        |s_{n+k}-s_n|<\frac{1}{2^k}\left[\frac{1-\frac{1}{2^n}}{\frac{1}{2}}\right]<\frac{1}{2^k}\left[\frac{1}{\frac{1}{2}}\right]
+        |s_{n+k}-s_n|<\frac{1}{2^n}\left[\frac{1-\frac{1}{2^k}}{\frac{1}{2}}\right]<\frac{1}{2^n}\left[\frac{1}{\frac{1}{2}}\right]
     \]
     \[
-      |s_{n+k}-s_n|<\frac{1}{2^{k-1}}
+      |s_{n+k}-s_n|<\frac{1}{2^{n-1}}
     \]
     From this statement we can now prove that it is cauchy by considering an epsilon as follos:
     \[
-      \epsilon=\frac{1}{2^{k-1}}
+      \epsilon=\frac{1}{2^{n-1}}
     \]
     Which gives a value of N equal to:
     \[
@@ -317,7 +317,7 @@
     \item Which of the sequences converges? Diverges to $\infty$? Diverges to $-\infty$\\
     All sequences except a and b converge. Sequence b diverges to infinity
     \item Which of the sequences is bounded ?\\
-    all sequences except $c_n$ are bounded
+    all sequences except $c_n$ are boundedjnk,
   \end{enumerate}
 \end{enumerate}
 \end{document}
