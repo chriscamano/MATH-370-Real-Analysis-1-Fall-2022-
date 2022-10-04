@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  29 SEP 2022 19:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  4 OCT 2022 14:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**MATH370_Assignment_4.tex
-(./MATH370_Assignment_4.tex
+**MATH_370_lecture_12.tex
+(./MATH_370_lecture_12.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-07-12>
 (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -337,7 +337,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@proposition=\count284
 
 Runaway argument?
-./MATH370_Assignment_4.tex:39: Paragraph ended before \date  was complete.
+./MATH_370_lecture_12.tex:39: Paragraph ended before \date  was complete.
 <to be read again> 
                    \par 
 l.39 
@@ -356,8 +356,8 @@ File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box54
 )
-(./MATH370_Assignment_4.aux)
-\openout1 = `MATH370_Assignment_4.aux'.
+(./MATH_370_lecture_12.aux)
+\openout1 = `MATH_370_lecture_12.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
@@ -425,9 +425,9 @@ LaTeX Info: Redefining \ref on input line 59.
 LaTeX Info: Redefining \pageref on input line 59.
 LaTeX Info: Redefining \nameref on input line 59.
 
-(./MATH370_Assignment_4.out) (./MATH370_Assignment_4.out)
+(./MATH_370_lecture_12.out) (./MATH_370_lecture_12.out)
 \@outlinefile=\write3
-\openout3 = `MATH370_Assignment_4.out'.
+\openout3 = `MATH_370_lecture_12.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
  61.
@@ -465,125 +465,39 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
- [1
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+
+ []
+
+[1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
+(./MATH_370_lecture_12.aux)
 
- []
+Package rerunfilecheck Warning: File `MATH_370_lecture_12.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-./MATH370_Assignment_4.tex:134: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.134 ...xtbf{Find $\nlim(\sum_{k=0}^na^k), |a|<1}
-                                                  $}\\
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[2]
-./MATH370_Assignment_4.tex:162: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.162 ...hat is  $\nlim(\sum_{k=0}^na^k), a\geq 1}
-                                                  $}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[3]
-
-./MATH370_Assignment_4.tex:211: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.211     L
-           et $(s_n)$ be a sequence such that:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./MATH370_Assignment_4.tex:218: Undefined control sequence.
-l.218 ...ilon>0 \exists N: \quad m,n>N \righatrrow
-                                                   |s_m-s_n|<\epsilon
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 261--263
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 261--263
-
- []
-
-
-./MATH370_Assignment_4.tex:264: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.264     I
-           s the result in (a) true if we only assume $|s_{n+1}-s_n|<\frac{1...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--267
-
- []
-
-./MATH370_Assignment_4.tex:273: Double subscript.
-l.273   lim_{k\rightarrow \infty}a_n_
-                                     k=1$
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-[5] [6] (./MATH370_Assignment_4.aux)
-Package rerunfilecheck Info: File `MATH370_Assignment_4.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: Checksums for `MATH_370_lecture_12.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  5ADA2F5758136E6F1095816766C2C680;250.
  ) 
 Here is how much of TeX's memory you used:
- 9528 strings out of 478542
- 137194 string characters out of 5854402
- 449121 words of memory out of 5000000
- 27266 multiletter control sequences out of 15000+600000
- 438188 words of font info for 109 fonts, out of 8000000 for 9000
+ 9449 strings out of 478542
+ 136451 string characters out of 5854402
+ 437116 words of memory out of 5000000
+ 27240 multiletter control sequences out of 15000+600000
+ 420290 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,10n,66p,401b,566s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,6n,66p,236b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c
-:/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2021/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1
-/urw/times/utmr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on MATH370_Assignment_4.pdf (6 pages, 101028 bytes).
+/urw/times/utmr8a.pfb>
+Output written on MATH_370_lecture_12.pdf (1 page, 26631 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 35 named destinations out of 1000 (max. 500000)
+ 26 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
